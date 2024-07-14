@@ -2,9 +2,9 @@
 
 ## Overview
 
-The Jobs Dashboard Project is a comprehensive system that allows users to manage job listings, companies, locations, and associated metadata. It is built using a PostgreSQL database, FastAPI for the backend, and Streamlit for the frontend. The database is managed using pgAdmin.
+The Jobs Dashboard Project is a comprehensive system that allows users to analyze job listings, companies, locations, and associated metadata. It is built using a PostgreSQL database, FastAPI for the backend, and Streamlit for the frontend. The database is managed using pgAdmin.
 
-The project uses Poetry for dependency management and Asynchronous SQLAlchemy with Pydantic for data validation. Database schemas are created using SQLAlchemy ORM. Initial data is populated in the database using lifecycle events on the startup of the FastAPI app. Streamlit is used to create a dynamic dashboard to analyze data of the posted jobs from the database.
+The project uses Poetry for dependency management and Asynchronous SQLAlchemy to communicate the backend api with the postgresql database, while it uses Pydantic for data validation. Database schemas are created using SQLAlchemy ORM. Initial random data is populated in the database using lifecycle events on the startup of the FastAPI app. Streamlit is used to create a dynamic dashboard to analyze data of the posted jobs from the database.
 
 ## Architecture
 
@@ -66,22 +66,19 @@ Ensure you have the following software installed:
 2. **Set up environment variables**:
     Create a `.env` file in the root directory and add the necessary environment variables.
     ```env
-# FastAPI Backend
-BACKEND_SERVICE_NAME=backend
-BACKEND_PORT=8000
-# Postgres - BACKEND
-POSTGRES_SERVICE_NAME=database
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=admin
-POSTGRES_DB=test
-POSTGRES_SERVER=local
-POSTGRES_PORT=5448
-POSTGRES_HOST=localhost
-# PG Admin
-PGADMIN_PORT=8086
-PGADMIN_DEFAULT_EMAIL='admin@test.com'
-PGADMIN_DEFAULT_PASSWORD=admintest
-PGADMIN_DEFAULT_PASSWORD_FILE=admin
+        BACKEND_SERVICE_NAME=backend
+        BACKEND_PORT=8000   
+        POSTGRES_SERVICE_NAME=database
+        POSTGRES_USER=postgres
+        POSTGRES_PASSWORD=admin
+        POSTGRES_DB=test
+        POSTGRES_SERVER=local
+        POSTGRES_PORT=5448
+        POSTGRES_HOST=localhost    
+        PGADMIN_PORT=8086
+        PGADMIN_DEFAULT_EMAIL='admin@test.com'
+        PGADMIN_DEFAULT_PASSWORD=admintest
+        PGADMIN_DEFAULT_PASSWORD_FILE=admin
     ```
 
 3. **Build the images**:

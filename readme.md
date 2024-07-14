@@ -4,7 +4,7 @@
 
 The Jobs Dashboard Project is a comprehensive system that allows users to analyze job listings, companies, locations, and associated metadata. It is built using a PostgreSQL database, FastAPI for the backend, and Streamlit for the frontend. The database is managed using pgAdmin.
 
-The project uses Poetry for dependency management and Asynchronous SQLAlchemy to communicate the backend api with the postgresql database, while it uses Pydantic for data validation. Database schemas are created using SQLAlchemy ORM. Initial random data is populated in the database using lifecycle events on the startup of the FastAPI app. Streamlit is used to create a dynamic dashboard to analyze data of the posted jobs from the database.
+The project uses Poetry for dependency management and Asynchronous SQLAlchemy to communicate the backend api with the postgresql database, while it uses Pydantic for data validation. Database schemas are created using SQLAlchemy ORM. Initial random data is populated in the database using lifecycle events on the startup of the FastAPI app. Streamlit is used to create a dynamic dashboard to analyze data of the posted jobs from the database. **The database is populated with totally random data to enable comprehensive testing and analysis within the Streamlit app.**
 
 ## Architecture
 
@@ -97,6 +97,18 @@ Ensure you have the following software installed:
     - **Streamlit (Frontend)**: [http://localhost:8501](http://localhost:8501)
     - **FastAPI (Backend)**: [http://localhost:8000](http://localhost:8000)
     - **pgAdmin**: [http://localhost:8086](http://localhost:8086)
+
+
+## Streamlit App
+
+Here are screenshots of the Streamlit app:
+
+![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img1.png)
+![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img2.png)
+![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img3.png)
+![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img4.png)
+![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img5.png)
+![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img6.png)
 
 ## API Endpoints
 

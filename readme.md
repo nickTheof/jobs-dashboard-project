@@ -109,6 +109,7 @@ Here are screenshots of the Streamlit app:
 ![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img4.png)
 ![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img5.png)
 ![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img6.png)
+![Streamlit App](https://github.com/nickTheof/jobs-dashboard-project/blob/main/images/streamlitapp_img7.png)
 
 ## API Endpoints
 

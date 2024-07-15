@@ -1,5 +1,6 @@
 from contextlib import asynccontextmanager
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, HTTPException, status
+
 from populate_data import pop_data
 from crud import get_db
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -51,6 +52,8 @@ async def get_continents(db: AsyncSession=Depends(get_db)):
 @app.get("/continents/{continent_id}")
 async def get_continent_by_id(continent_id: int, db: AsyncSession=Depends(get_db)):
     query = (await db.scalars(select(Continents).filter(Continents.continent_id == continent_id))).first()
+    if not query:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Continent with id: {continent_id} doesn't exist.")
     dic = []
     for b1 in await query.awaitable_attrs.countries:
         dic.append({'country_id': b1.country_id, 'country_name': b1.country_name})
